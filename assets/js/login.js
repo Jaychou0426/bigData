@@ -28,17 +28,21 @@ $(function() {
         let pwd = $('.reg-box [name=password]').val();
         $.ajax({
             type: "POST",
-            url: baseURL + "/api/reguser",
+            url: "/api/reguser",
             data: {
                 username: name,
                 password: pwd
             },
             success: function(response) {
                 if (response.status === 0) {
-                    return layer.open({
+                    layer.open({
                         title: '这是一个提示',
                         content: '注册成功啦！'
                     });
+                    $('.login-box').show();
+                    $('.reg-box').hide();
+                    $('#form_login [name=username]').val(name);
+                    $('#form_login [name=password]').val(pwd);
 
                 } else if (response.status === 1) {
                     return layer.open({
@@ -81,7 +85,7 @@ $(function() {
 
     $('#form_login').submit(function(e) {
         e.preventDefault();
-        $.post(baseURL + '/api/login', {
+        $.post('/api/login', {
             username: $('#form_login [name=username]').val(),
             password: $('#form_login [name=password]').val()
         }, function(response) {

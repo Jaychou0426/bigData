@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="hot-purchase">
+        <div class="title">热门团购</div>
+        <dl class="item on">
+            <dt>
+                <a href="" class="text-area">[text]</a>
+                <a href="" class="text-name">title</a>
+                <span class="price">13000</span>
+            </dt>
+            <dd class="tag-1">
+                <span class="tag">title</span>
+                <span class="description">test</span>
+            </dd>
+            <dd class="tag-2 clearfix">
+                <div class="picture-left fl">
+                    <a href=""><img src="../images/consult_hot_purchase.jpg" alt=""></a>
+                </div>
+                <div class="content-right fl">
+                    <p>description</p>
+                    <a href="">link</a>
+                </div>
+            </dd>
+        </dl>
+        <dl class="item">
+            <dt>
+                <a href="" class="text-area">[text]</a>
+                <a href="" class="text-name">title</a>
+                <span class="price">13000</span>
+            </dt>
+            <dd class="tag-1">
+                <span class="tag">title</span>
+                <span class="description">test</span>
+            </dd>
+            <dd class="tag-2 clearfix">
+                <div class="picture-left fl">
+                    <a href=""><img src="../images/consult_hot_purchase.jpg" alt=""></a>
+                </div>
+                <div class="content-right fl">
+                    <p>description</p>
+                    <a href="">link</a>
+                </div>
+            </dd>
+        </dl>
+        <dl class="item">
+            <dt>
+                <a href="" class="text-area">[text]</a>
+                <a href="" class="text-name">title</a>
+                <span class="price">13000</span>
+            </dt>
+            <dd class="tag-1">
+                <span class="tag">title</span>
+                <span class="description">test</span>
+            </dd>
+            <dd class="tag-2 clearfix">
+                <div class="picture-left fl">
+                    <a href=""><img src="../images/consult_hot_purchase.jpg" alt=""></a>
+                </div>
+                <div class="content-right fl">
+                    <p>description</p>
+                    <a href="">link</a>
+                </div>
+            </dd>
+        </dl>
+        <dl class="item">
+            <dt>
+                <a href="" class="text-area">[text]</a>
+                <a href="" class="text-name">title</a>
+                <span class="price">13000</span>
+            </dt>
+            <dd class="tag-1">
+                <span class="tag">title</span>
+                <span class="description">test</span>
+            </dd>
+            <dd class="tag-2 clearfix">
+                <div class="picture-left fl">
+                    <a href=""><img src="../images/consult_hot_purchase.jpg" alt=""></a>
+                </div>
+                <div class="content-right fl">
+                    <p>description</p>
+                    <a href="">link</a>
+                </div>
+            </dd>
+        </dl>
+        <dl class="item">
+            <dt>
+                <a href="" class="text-area">[text]</a>
+                <a href="" class="text-name">title</a>
+                <span class="price">13000</span>
+            </dt>
+            <dd class="tag-1">
+                <span class="tag">title</span>
+                <span class="description">test</span>
+            </dd>
+            <dd class="tag-2 clearfix">
+                <div class="picture-left fl">
+                    <a href=""><img src="../images/consult_hot_purchase.jpg" alt=""></a>
+                </div>
+                <div class="content-right fl">
+                    <p>description</p>
+                    <a href="">link</a>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <script src="./assets/lib/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.consult-right .hot-purchase .item').each(function(index) {
+                $(this).hover(function() {
+                    $(this).addClass('on');
+                    let siblings = $(this).siblings('.item');
+                    siblings.removeClass('on')
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
