@@ -22,13 +22,13 @@ function getUserInfo() {
             if (response.status === 0 && response.data.user_pic !== null) {
                 $('.text-avatar').hide();
                 $('#welcome')[0].innerText = '欢迎 ' + response.data.username;
-                $('.layui-nav-img').attr('src'.response.data.user_pic).show();
+                $('.layui-nav-img').attr('src', response.data.user_pic).show();
             } else if (response.status === 0 && response.data.user_pic === null) {
                 $('.text-avatar').show();
                 $('.layui-nav-img').hide();
                 $('#welcome')[0].innerText = '欢迎 ' + response.data.username;
                 renderAvatar(response.data);
-                // console.log(response);
+
             }
             // else {
             //     alert("登陆状态失效啦！请重新登陆！");
